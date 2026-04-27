@@ -17,11 +17,11 @@ def login():
     cursor = conn.cursor()
     
     
-    query = f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"
+    query = "SELECT * FROM users WHERE username = ? AND password = ?"
     
     try:
         
-        user = cursor.execute(query).fetchone()
+        user = cursor.execute(query, (username, password)).fetchone()
     except Exception as e:
         return f"Database Error: {str(e)}", 500
 
@@ -31,7 +31,7 @@ def login():
             "message": "Login successful",
             "username": user[0],
             "password": user[1],
-            "ssn": user[2]  # <--- CRITICAL PRIVACY LEAK
+            # "ssn": user[2]  # <--- CRITICAL PRIVACY LEAK
         }, 200
     
     return "Access Denied", 401

@@ -1,0 +1,12 @@
+nohup: ignoring input
+ * Serving Flask app 'auth-service-new'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.19.160.32:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [27/Apr/2026 15:33:30] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+127.0.0.1 - - [27/Apr/2026 15:33:40] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+127.0.0.1 - - [27/Apr/2026 15:33:40] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+127.0.0.1 - - [27/Apr/2026 15:33:40] "POST /login HTTP/1.1" 200 -
